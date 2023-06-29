@@ -11,7 +11,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">商品一覧</h3>
+                    <h3 class="card-title">商品検索</h3>
                     <div class="search" >
                         <form class="d-flex" action="{{ url('/items') }}" method="GET">
                             <input class="word" type="text" name="keyword" value="{{ $keyword }}" autofocus>
