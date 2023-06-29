@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateItemsTable extends Migration
+class CreateTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('items', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->id()->index();
-            $table->bigInteger('user_id')->unsigned()->index();
-            $table->string('name', 100)->index();
+            $table->string('type_name',100)->unique()->index();
             $table->string('status', 100)->default('active');
-            $table->smallInteger('type')->nullable();
-            // $table->smallInteger('inventory')->default('0');
-            $table->string('detail', 500)->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreateItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('types');
     }
 }
