@@ -35,7 +35,7 @@ class ItemController extends Controller
             'i.user_id as user_id',
             'i.name as name',
             'i.type as type',
-            'i.inventory as inventory',
+            // 'i.inventory as inventory',
             'i.detail as detail',
             't.type_name as type_name',
         ])
@@ -87,7 +87,7 @@ class ItemController extends Controller
                 'user_id' => Auth::user()->id,
                 'name' => $request->name,
                 'type' => $request->type,
-                'inventory' => $request->inventory,
+                // 'inventory' => $request->inventory,
                 'detail' => $request->detail,
             ]);
 
@@ -129,7 +129,7 @@ class ItemController extends Controller
             $item->update([
                 'name' => $request->name,
                 'type' => $request->type,
-                'inventory' => $request->inventory,
+                // 'inventory' => $request->inventory,
                 'detail' => $request->detail,
             ]);
         return redirect('/items');

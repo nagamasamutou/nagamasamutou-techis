@@ -42,10 +42,10 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="inventory">在庫数</label>
                             <input type="number" class="form-control" id="inventory" name="inventory" placeholder="1, 2, 3, ...">
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                             <label for="detail">詳細</label>
