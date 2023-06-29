@@ -36,7 +36,7 @@
                                 <th>ID</th>
                                 <th>名前</th>
                                 <th>種別</th>
-                                <th>在庫数</th>
+                                <!-- <th>在庫数</th> -->
                                 <th>詳細</th>
                             </tr>
                         </thead>
@@ -46,7 +46,7 @@
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->type_name }}</td>
-                                    <td>{{ $item->inventory }}</td>
+                                    <!-- <td>{{ $item->inventory }}</td> -->
                                     <td>{{ $item->detail }}</td>
                                     @can('admin-higher')
                                     <td><a href=" {{ url('/items/item_edit', ['id'=>$item->id]) }} ">{{ __('>>編集') }}</td>
