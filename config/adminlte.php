@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>商品管理</b>',
+    'logo' => '<b>商品管理システム</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -228,6 +228,11 @@ return [
         [
             'text' => '商品一覧',
             'url'  => 'items',
+            'icon' => 'fas fa-gamepad',
+        ],
+        [
+            'text' => '種別一覧',
+            'url'  => 'items/type_index',
             'icon' => 'fas fa-gamepad',
         ],
 

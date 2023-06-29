@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', '商品一覧')
+@section('title', '種別一覧')
 
 @section('content_header')
-    <h1>商品一覧</h1>
+    <h1>種別一覧</h1>
 @stop
 
 @section('content')
@@ -11,18 +11,12 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">商品一覧</h3>
-                    <div class="search" >
-                        <form class="d-flex" action="{{ url('/items') }}" method="GET">
-                            <input class="word" type="text" name="keyword" value="{{ $keyword }}" autofocus>
-                            <input class="btn-search" type="submit" value="検索">
-                        </form>
-                    </div>
+                    <h3 class="card-title">種別一覧</h3>
                     <div class="card-tools">
                     @can('admin-higher')
                         <div class="input-group input-group-sm">
                             <div class="input-group-append">
-                                <a href="{{ url('items/add') }}" class="btn btn-default">商品登録</a>
+                                <a href="{{ url('items/type_add') }}" class="btn btn-default">種別登録</a>
                             </div>
                         </div>
                     @elsecan('user-higher')
@@ -34,22 +28,16 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>名前</th>
                                 <th>種別</th>
-                                <th>在庫数</th>
-                                <th>詳細</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($items as $item)
+                            @foreach ($types as $type)
                                 <tr>
-                                    <td>{{ $item->id }}</td>
-                                    <td>{{ $item->name }}</td>
-                                    <td>{{ $item->type_name }}</td>
-                                    <td>{{ $item->inventory }}</td>
-                                    <td>{{ $item->detail }}</td>
+                                    <td>{{ $type->id }}</td>
+                                    <td>{{ $type->type_name }}</td>
                                     @can('admin-higher')
-                                    <td><a href=" {{ url('/items/item_edit', ['id'=>$item->id]) }} ">{{ __('>>編集') }}</td>
+                                    <td><a href=" {{ url('items/type_edit', ['id'=>$type->id]) }} ">{{ __('>>編集') }}</td>
                                     @elsecan('user-higher')
                                     @endcan
                                 </tr>
@@ -63,7 +51,6 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/custom.css">
 @stop
 
 @section('js')
