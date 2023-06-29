@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use App\Models\Item;
 use App\Models\Types;
-// use App\Models\User;
+use App\Models\User;
 
 class ItemController extends Controller
 {
