@@ -162,7 +162,7 @@ return [
     'attributes' => [
         'type_name' => '種別名',
         'name' => '名前',
-        'email' => 'メール',
+        'email' => 'メールアドレス',
         'password' => 'パスワード',
         'password_comfirmation' => 'パスワード（確認）',
         'detail' => '詳細',
